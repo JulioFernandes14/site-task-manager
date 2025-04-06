@@ -28,7 +28,7 @@ O **Task Manager** é um gerenciador de tarefas desenvolvido com Angular, onde v
    ```
 2. Acesse a pasta do projeto:
    ```bash
-   cd seu-repo-frontend
+   cd site-task-manager
    ```
 3. Instale as dependências:
    ```bash
