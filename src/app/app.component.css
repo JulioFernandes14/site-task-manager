@@ -1,0 +1,11 @@
+main {
+    display: flex;
+}
+
+.menu {
+    width: 20%;
+}
+
+.content {
+    width: 80%;
+}

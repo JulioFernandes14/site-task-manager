@@ -1,0 +1,57 @@
+<div class="manager">
+    <div class="hearder">
+        <h1>Gerenciamento de Tarefas</h1>
+        <div class="tasks">
+            <div class="tasks-count">
+                <p-metergroup [value]="barValues" />
+            </div>
+            <div class="new-task">
+                <app-create-task />
+            </div>
+        </div>
+    </div>
+    <div class="data-list">
+
+        <table>
+            <thead>
+                <th style="border-top-left-radius: 20px;">Tarefa</th>
+                <th>Descrição</th>
+                <th>Data de Criação</th>
+                <th>Status</th>
+                <th style="border-top-right-radius: 20px;"></th>
+            </thead>
+            <tbody>
+                @for(tarefa of dataTablePagination[page - 1]; track tarefa) {
+                    <tr>
+                        <td>{{tarefa.nome}}</td>
+                        <td>{{limitarDescricao(tarefa.descricao)}}</td>
+                        <td>{{tarefa.dataCriacao}}</td>
+
+                        @if (tarefa.status === 'Pendente') {
+                            <td><p-tag severity="warn" value={{tarefa.status}} [rounded]="true" /></td>
+                        }
+
+                        @if (tarefa.status === 'Em progresso') {
+                            <td><p-tag severity="info" value={{tarefa.status}} [rounded]="true" /></td>
+                        }
+
+                        @if (tarefa.status === 'Concluído') {
+                            <td><p-tag severity="success" value={{tarefa.status}} [rounded]="true" /></td>
+                        }
+
+                        @if (tarefa.status === 'Paralisada') {
+                            <td><p-tag severity="danger" value={{tarefa.status}} [rounded]="true" /></td>
+                        }
+
+                        <td> <app-edit-task  [task]="tarefa"/> </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="pagination"> 
+            {{page}} de {{dataTablePagination.length}} <i class="pi pi-angle-left" style="font-size: 1rem; font-weight: bold;" (click)="previousPage()"></i> <i class="pi pi-angle-right" style="font-size: 1rem; font-weight: bold;" (click)="nextPage()"></i>
+        </div>
+
+    </div>
+</div>

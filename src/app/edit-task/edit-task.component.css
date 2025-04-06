@@ -1,0 +1,65 @@
+.edit {
+    padding: 10px 20px;
+    background-color: #3263cd;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dialog-task {
+    width: 100%;
+    height: 100%;
+}
+
+.task-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #3263cd !important;
+  }
+
+.task-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.save {
+    width: 80px;
+    background-color: #3263cd;
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save:hover {
+    background-color: #7d9adb;
+}
+
+.date {
+    background-color: #27272a;
+    border: 1px solid #52525b;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #8f8f8f;
+}
+
+.select {
+    background-color: #27272a;
+    border: 1px solid #52525b;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}

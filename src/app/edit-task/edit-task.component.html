@@ -1,0 +1,35 @@
+<div class="dialog-task">
+    <p-toast />
+    <button class="edit" (click)="showDialog()"><i class="pi pi-file-edit" style="font-size: 1rem;"></i> Editar</button>
+
+    <p-dialog header="Editar Tarefa ({{task.id}})" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+        <div class="task-item">
+            <label>Tarefa</label>
+            <input pInputText id="tarefa" [(ngModel)]="task.nome" autocomplete="off" value="task.nome" />
+        </div>
+        <div class="task-item">
+            <label>Descrição</label>
+            <textarea rows="5" cols="30" pTextarea [(ngModel)]="task.descricao" [value]="task.descricao"></textarea>
+        </div>
+        <div class="task-item">
+            <label>Data criação</label>
+            <span class="date">{{task.dataCriacao}}</span>
+        </div>
+
+        <div class="task-item">
+            <label>Status</label>
+            <select class="select" [(ngModel)]="task.status">
+                <option value="Pendente">Pendente</option>
+                <option value="Em progresso">Em progresso</option>
+                <option value="Concluído">Concluído</option>
+                <option value="Paralisada">Paralisada</option>
+            </select>
+        </div>
+
+        <div class="task-buttons">
+            <p-button label="Cancelar" severity="secondary" (click)="visible = false" class="cancel" />
+            <button (click)="updateTask()" class="save">Editar</button>
+        </div>
+    </p-dialog>
+
+</div>

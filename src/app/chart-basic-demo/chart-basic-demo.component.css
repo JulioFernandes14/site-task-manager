@@ -1,0 +1,80 @@
+.details {
+    width: 80%;
+    margin: 80px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.chart {
+    background-color: #171717;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.data-list {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.xls {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.xls > button {
+    padding: 20px 50px;
+    background-color: #3263cd;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    background-color: #424242;
+    color: #a6a4a4;
+    font-weight: normal;
+}
+
+tbody {
+    background-color: #171717;
+}
+
+table,td,th,tr {
+    border-bottom: 1px solid #616161;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: left;
+    padding: 20px;
+}
+
+th {
+    font-size: 22px;
+}
+
+.pagination {
+    background-color: #171717;
+    padding: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    gap: 5px;
+}
+
+i {
+    cursor: pointer;
+}
+
+td > p-tag {
+    width: 100%;
+    padding: 5px;
+}

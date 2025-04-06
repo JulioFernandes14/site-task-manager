@@ -1,0 +1,30 @@
+<header>
+    <h1>Gerencie Suas Tarefas de Forma Simples e Eficiente</h1>
+    <p>Organize seu dia a dia e aumente sua produtividade com o Task Manager.</p>
+    <a class="btn">Cadastre-se Gratuitamente</a>
+</header>
+
+<div class="content">
+    <section class="features">
+        <h2>O Que é o Task Manager?</h2>
+        <p>Um gerenciador de tarefas inteligente que ajuda você a planejar, priorizar e concluir suas atividades de maneira eficiente.</p>
+        <ul>
+            @for (obj of objetivos; track obj) {
+                <li> {{obj.objetivo}} </li>
+            }@empty {
+                <li>Não conseguimos carregas os nossos objetivos :(</li>
+            }
+        </ul>
+    </section>
+    
+    <div class="flex-end">
+        <section class="about">
+            <h2>Sobre Nós</h2>
+            <p>Somos apaixonados por produtividade e tecnologia. Nosso objetivo é oferecer ferramentas inovadoras que transformam a forma como as pessoas gerenciam seu tempo.</p>
+        </section>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Task Manager. Todos os direitos reservados.</p>
+</footer>
