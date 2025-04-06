@@ -4,6 +4,7 @@ import { MeterGroup } from 'primeng/metergroup';
 import { TagModule } from 'primeng/tag';
 import { CreateTaskComponent } from "../create-task/create-task.component";
 import { EditTaskComponent } from "../edit-task/edit-task.component";
+import { DeleteTaskComponent } from "../delete-task/delete-task.component";
 
 interface Task {
   id:number
@@ -22,7 +23,7 @@ interface countStatus {
 
 @Component({
   selector: 'app-manage-tasks',
-  imports: [MeterGroup, TagModule, CreateTaskComponent, CreateTaskComponent, EditTaskComponent],
+  imports: [MeterGroup, TagModule, CreateTaskComponent, CreateTaskComponent, EditTaskComponent, DeleteTaskComponent],
   templateUrl: './manage-tasks.component.html',
   styleUrl: './manage-tasks.component.css'
 })

@@ -18,6 +18,7 @@
                 <th>Descrição</th>
                 <th>Data de Criação</th>
                 <th>Status</th>
+                <th></th>
                 <th style="border-top-right-radius: 20px;"></th>
             </thead>
             <tbody>
@@ -44,6 +45,8 @@
                         }
 
                         <td> <app-edit-task  [task]="tarefa"/> </td>
+
+                        <td> <app-delete-task [task]="tarefa" /> </td>
 
                     </tr>
                 }

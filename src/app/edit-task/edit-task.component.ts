@@ -52,14 +52,19 @@ export class EditTaskComponent {
       }
     });
 
-    this.task.nome = ''
-    this.task.descricao = ''
-
     this.visible = false;
 
     setTimeout(() => {
       window.location.reload()
     },1000)
+
+    this.task = {
+      id:0,
+      nome:'',
+      descricao:'',
+      status:'',
+      dataCriacao:''
+    }
   }
 
 }

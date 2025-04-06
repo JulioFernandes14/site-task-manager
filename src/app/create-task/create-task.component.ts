@@ -38,7 +38,7 @@ export class CreateTaskComponent {
   ngOnInit() {
     const date = new Date()
 
-    this.newTask.dataCriacao = `${date.getFullYear()}-${String(date.getMonth()).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`
+    this.newTask.dataCriacao = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`
   }
 
   showDialog() {
